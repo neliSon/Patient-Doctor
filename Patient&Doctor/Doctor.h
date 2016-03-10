@@ -16,8 +16,9 @@
 @property (nonatomic) id<PatientDelegate> patient;
 
 @property (nonatomic,strong) NSString *name, *specialization;
-@property (strong) NSMutableSet *acceptedPatients;
+@property (strong) NSMutableSet *acceptedPatients, *prescribedDrugs;
 @property (strong) NSDictionary *prescriptions;
+
 
 //- (void) askForHealthCard: Patient;
 - (instancetype)initWithName: (NSString *) name andSpecialization: (NSString *) specialization;

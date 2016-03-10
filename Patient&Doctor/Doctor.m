@@ -27,6 +27,7 @@
     self = [super init];
     if (self) {
         _acceptedPatients = [NSMutableSet set];
+        _prescribedDrugs = [NSMutableSet set];
         _prescriptions = @{@"stupidity":@"no known cure / education is key"};
     }
     return self;
@@ -56,6 +57,7 @@
         for (NSString *symptom in patient.setOfSymptoms) {
             NSString *drug = [self.prescriptions objectForKey:symptom];
             NSLog(@"%@", drug);
+            [self.prescribedDrugs addObject:drug];
         }
     }else {
         NSLog(@"Not a patient.");
