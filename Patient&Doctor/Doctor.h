@@ -15,8 +15,9 @@
 @property (nonatomic) id<PatientDelegate> patient;
 
 @property (nonatomic) NSString *name, *specialization;
+@property NSMutableSet *acceptedPatients;
 
-- (void) askForHealthCard: Patient;
+//- (void) askForHealthCard: Patient;
 - (void) acceptPatient: Patient;
 
 @end

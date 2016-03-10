@@ -20,14 +20,21 @@
     return self;
 }
 
-- (void) askForHealthCard:(id)Patient {
-    if ([Patient hasHealthCard]) {
-        
-    }
-}
+
+
+//- (void) askForHealthCard:(id)Patient {
+//    if ([Patient hasHealthCard]) {
+//        [self.acceptedPatients addObject:Patient];
+//
+//    }
+//}
 
 - (void) acceptPatient:(id)Patient {
+    if ([Patient hasHealthCard]) {
+        [self.acceptedPatients addObject:Patient];
         NSLog(@"%@ accepts %@ as a patient", self.name, [Patient name]);
+    }
+    
 }
 
 @end

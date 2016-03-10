@@ -22,7 +22,6 @@
 
 - (void) visitDoctor: (id)Doctor {
     NSLog(@"%@ is visiting %@.", self.name, [Doctor name]);
-    
 }
 
 @end
