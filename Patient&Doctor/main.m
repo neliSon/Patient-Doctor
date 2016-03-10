@@ -8,16 +8,22 @@
 
 #import <Foundation/Foundation.h>
 #import "Patient.h"
+#import "Doctor.h"
+#import "PatientDelegate.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         NSLog(@"Hello, World!");
         
-//        Patient *patient = [[Patient alloc]init];
-//        
-//        [patient setName:@"Ill"];
-//        NSLog(@"%@", [patient name]);
+        Patient *patient = [[Patient alloc]init];
+        Doctor *doctor = [[Doctor alloc] init];
         
+        [patient setName:@"Ill"];
+        NSLog(@"%@", [patient name]);
+        
+        [doctor setName:@"Who"];
+
+        [patient visitDoctor: doctor];
     }
     return 0;
 }

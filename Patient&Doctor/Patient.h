@@ -7,12 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Doctor.h"
+#import "PatientDelegate.h"
 
-@interface Patient : NSObject
+@interface Patient : NSObject <PatientDelegate>
 
 @property (nonatomic) NSString *name;
 @property (nonatomic) int age;
+@property (nonatomic) BOOL hasHealthCard;
 
-
+// - (void) visitDoctor: Doctor;
 
 @end

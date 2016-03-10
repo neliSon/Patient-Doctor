@@ -10,14 +10,19 @@
 
 @implementation Patient
 
-- (instancetype)init
+- (instancetype)initWithName: (NSString *) name andAge: (int) age
 {
     self = [super init];
     if (self) {
-        _name = self.name;
-        _age = self.age;
+        _name = name;
+        _age = age;
     }
     return self;
+}
+
+- (void) visitDoctor: (id)Doctor {
+    NSLog(@"%@ is visiting %@.", self.name, [Doctor name]);
+    
 }
 
 @end

@@ -31,6 +31,7 @@
 		1BE3B1C71C91FF15005B1499 /* Patient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Patient.m; sourceTree = "<group>"; };
 		1BE3B1C91C920192005B1499 /* Doctor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Doctor.h; sourceTree = "<group>"; };
 		1BE3B1CA1C920192005B1499 /* Doctor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Doctor.m; sourceTree = "<group>"; };
+		1BE3B1CF1C920CF7005B1499 /* PatientDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PatientDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +69,7 @@
 				1BE3B1C71C91FF15005B1499 /* Patient.m */,
 				1BE3B1C91C920192005B1499 /* Doctor.h */,
 				1BE3B1CA1C920192005B1499 /* Doctor.m */,
+				1BE3B1CF1C920CF7005B1499 /* PatientDelegate.h */,
 			);
 			path = "Patient&Doctor";
 			sourceTree = "<group>";

@@ -10,14 +10,24 @@
 
 @implementation Doctor
 
-- (instancetype)init
+- (instancetype)initWithName: (NSString *) name andSpecialization: (NSString *) specialization
 {
     self = [super init];
     if (self) {
-        _name = self.name;
-        _specialization = self.specialization;
+        _name = name;
+        _specialization = specialization;
     }
     return self;
+}
+
+- (void) askForHealthCard:(id)Patient {
+    if ([Patient hasHealthCard]) {
+        
+    }
+}
+
+- (void) acceptPatient:(id)Patient {
+        NSLog(@"%@ accepts %@ as a patient", self.name, [Patient name]);
 }
 
 @end
