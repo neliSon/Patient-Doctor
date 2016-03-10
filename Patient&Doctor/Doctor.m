@@ -7,16 +7,27 @@
 //
 
 #import "Doctor.h"
+#import "Patient.h"
 
 @implementation Doctor
 
 - (instancetype)initWithName: (NSString *) name andSpecialization: (NSString *) specialization
 {
-    self = [super init];
+    self = [self init];
     if (self) {
         _name = name;
         _specialization = specialization;
+        
+    }
+    return self;
+}
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
         _acceptedPatients = [NSMutableSet set];
+        _prescriptions = @{@"stupidity":@"no known cure / education is key"};
     }
     return self;
 }
@@ -34,8 +45,22 @@
     if ([patient hasHealthCard]) {
         [self.acceptedPatients addObject: patient];
         NSLog(@"%@ accepts %@ as a patient", self.name, patient.name);
+    }else {
+        NSLog(@"%@ needs a health card to be accepted as a patient", patient.name);
     }
-    
+
+}
+
+- (void) prescribeDrug: (Patient *) patient {
+    if ([self.acceptedPatients containsObject: patient]) {
+        for (NSString *symptom in patient.setOfSymptoms) {
+            NSString *drug = [self.prescriptions objectForKey:symptom];
+            NSLog(@"%@", drug);
+        }
+    }else {
+        NSLog(@"Not a patient.");
+    }
+        
 }
 
 @end

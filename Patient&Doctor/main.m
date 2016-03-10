@@ -15,21 +15,20 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         NSLog(@"Hello, World!");
         
-        Patient *patient = [[Patient alloc]init];
-        Doctor *doctor = [[Doctor alloc] init];
+        Patient *patient = [[Patient alloc]initWithName:@"Ill" andAge:25];
+        Doctor *doctor = [[Doctor alloc] initWithName:@"Who" andSpecialization:@"Dermatology"];
         
-        [patient setName:@"Ill"];
         [patient setHasHealthCard:true];
-        NSLog(@"%@ is the patient.", [patient name]);
+//        NSLog(@"%@ is the patient.", [patient name]);
         
-        [doctor setName:@"Who"];
+        [patient.setOfSymptoms addObject: @"stupidity"];
 
         [patient visitDoctor: doctor];
         [doctor acceptPatient: patient];
 //        [doctor askForHealthCard: patient];
         
         [patient requestMedication: doctor];
-        
+        [doctor prescribeDrug: patient];
         
     }
     return 0;

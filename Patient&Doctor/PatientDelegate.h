@@ -6,11 +6,13 @@
 //  Copyright © 2016 Nelson Chow. All rights reserved.
 //
 
+@class Doctor;
+
 @protocol PatientDelegate
 
 @property (nonatomic) BOOL hasHealthCard;
 
-- (void) visitDoctor: Doctor;
-- (void) requestMedication: Doctor;
+- (void) visitDoctor:(Doctor*) Doctor;
+- (void) requestMedication:(Doctor*) Doctor;
 
 @end

@@ -7,15 +7,26 @@
 //
 
 #import "Patient.h"
+#import "Doctor.h"
 
 @implementation Patient
 
 - (instancetype)initWithName: (NSString *) name andAge: (int) age
 {
-    self = [super init];
+    self = [self init];
     if (self) {
         _name = name;
         _age = age;
+        
+    }
+    return self;
+}
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _setOfSymptoms = [NSMutableSet set];
     }
     return self;
 }
@@ -28,7 +39,7 @@
     if ([doctor.acceptedPatients containsObject: self]) {
         NSLog(@"%@ requests for medication from %@", self.name, doctor.name);
     }else{
-        NSLog(@"Not an accepted patient.");
+        NSLog(@"Needs to be an accepted patient to request for medication.");
     }
 }
 
