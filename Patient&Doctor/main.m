@@ -20,13 +20,15 @@ int main(int argc, const char * argv[]) {
         
         [patient setName:@"Ill"];
         [patient setHasHealthCard:true];
-        NSLog(@"%@", [patient name]);
+        NSLog(@"%@ is the patient.", [patient name]);
         
         [doctor setName:@"Who"];
 
         [patient visitDoctor: doctor];
         [doctor acceptPatient: patient];
 //        [doctor askForHealthCard: patient];
+        
+        [patient requestMedication: doctor];
         
         
     }

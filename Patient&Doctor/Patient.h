@@ -12,9 +12,10 @@
 
 @interface Patient : NSObject <PatientDelegate>
 
-@property (nonatomic) NSString *name;
-@property (nonatomic) int age;
-@property (nonatomic) BOOL hasHealthCard;
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, assign) int age;
+@property (nonatomic, assign) BOOL hasHealthCard;
+
 
 // - (void) visitDoctor: Doctor;
 

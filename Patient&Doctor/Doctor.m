@@ -16,6 +16,7 @@
     if (self) {
         _name = name;
         _specialization = specialization;
+        _acceptedPatients = [NSMutableSet set];
     }
     return self;
 }
@@ -29,10 +30,10 @@
 //    }
 //}
 
-- (void) acceptPatient:(id)Patient {
-    if ([Patient hasHealthCard]) {
-        [self.acceptedPatients addObject:Patient];
-        NSLog(@"%@ accepts %@ as a patient", self.name, [Patient name]);
+- (void) acceptPatient:(Patient *) patient {
+    if ([patient hasHealthCard]) {
+        [self.acceptedPatients addObject: patient];
+        NSLog(@"%@ accepts %@ as a patient", self.name, patient.name);
     }
     
 }

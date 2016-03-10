@@ -11,5 +11,6 @@
 @property (nonatomic) BOOL hasHealthCard;
 
 - (void) visitDoctor: Doctor;
+- (void) requestMedication: Doctor;
 
 @end

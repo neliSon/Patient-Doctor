@@ -20,8 +20,16 @@
     return self;
 }
 
-- (void) visitDoctor: (id)Doctor {
-    NSLog(@"%@ is visiting %@.", self.name, [Doctor name]);
+- (void) visitDoctor: (Doctor *) doctor {
+    NSLog(@"%@ is visiting %@.", self.name, doctor.name);
+}
+
+- (void) requestMedication:(Doctor *) doctor {
+    if ([doctor.acceptedPatients containsObject: self]) {
+        NSLog(@"%@ requests for medication from %@", self.name, doctor.name);
+    }else{
+        NSLog(@"Not an accepted patient.");
+    }
 }
 
 @end
